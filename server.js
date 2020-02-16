@@ -4,7 +4,7 @@ const app = new express();
 const https = require('https');
 const port = process.env.PORT || 5000;
 
-const apik = '';
+const apik = process.env.NKEY;
 const langs = {'gb': 'Iso-Britannia', 'jp': 'Japani', 'fr': 'Ranska', 'de': 'Saksa', 'us': 'Yhdysvallat'};
 
 app.use(express.static('www'));
