@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = new express();
 const https = require('https');
+const port = process.env.PORT || 5000;
 
 const apik = '';
 const langs = {'gb': 'Iso-Britannia', 'jp': 'Japani', 'fr': 'Ranska', 'de': 'Saksa', 'us': 'Yhdysvallat'};
@@ -43,6 +44,6 @@ app.post('/getnews', (req, res) => {
     } else { res.send(false); }
 });
 
-app.listen(3000, () => {
-    console.log('App listening on port 3000')
+app.listen(port, () => {
+    console.log('App listening on port ' + port)
 })
