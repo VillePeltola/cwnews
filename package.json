@@ -1,0 +1,23 @@
+{
+  "name": "cwnews",
+  "version": "1.0.0",
+  "description": "Worldnews",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VillePeltola/cwnews.git"
+  },
+  "author": "Ville Peltola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VillePeltola/cwnews/issues"
+  },
+  "homepage": "https://github.com/VillePeltola/cwnews#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<title>CWN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="./lib/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/utils.js"></script>
+	</head>
+	
+  <body onload="main()">
+    <div class="main_container">
+      <div class="page_header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="header_logo"></div>
+            </div>
+            <div class="col header_text">
+              WORLD NEWS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page_content">
+        <div class="pc_0 container-sm">
+            <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend searchSelectContainer">
+                      <select data-id="pc_0_selector" class="custom-select" onchange="switchSearch(value)"></select>
+                    </div>
+                    <div class="newest" data-type="newest">
+                      <select id="dropdownMenuButton" class="custom-select" onchange="setNewest(value)"></select>
+                    </div>
+                    <div class="wordsearch" data-type="wordsearch">
+                      <input type="text" class="form-control" id="newsSearchInput" placeholder="Uutisaihe (esim. germany, google, internet, microsoft)" aria-describedby="button-addon2">
+                    </div>
+                    <div class="input-group-append searchBtnContainer">
+                      <button class="btn btn-primary btn-block" type="button" id="button-addon2" onclick="searchNews()">Hae</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        <div class="pc_1 container" id="newsContainer">
+          <div class="row"></div>
+        </div>
+      </div>
+      <div class="page_footer">
+        <div class="attributionContainer">
+          <a href="https://newsapi.org/" class=" badge badge-light">Powered by<br/> News API</a>
+        </div>
+        <nav class="paginationContainer" aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" data-id="prev">
+              <a class="page-link disabled" href="#" onclick="changePage(-1, true)" tabindex="-1">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item" data-id="0"><a class="page-link" onclick="changePage(this)" href="#">1</a></li>
+            <li class="page-item" data-id="1"><a class="page-link" onclick="changePage(this)" href="#">2</a></li>
+            <li class="page-item" data-id="2"><a class="page-link" onclick="changePage(this)" href="#">3</a></li>
+            <li class="page-item" data-id="3"><a class="page-link" onclick="changePage(this)" href="#">4</a></li>
+            <li class="page-item" data-id="4"><a class="page-link" onclick="changePage(this)" href="#">5</a></li>
+            <li class="page-item" data-id="next">
+              <a class="page-link" href="#" onclick="changePage(1, true)">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="loader">
+        <div class="spinner-border text-light" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+	</body>
+</html> 
