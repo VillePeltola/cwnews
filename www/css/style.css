@@ -1,0 +1,163 @@
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.main_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.page_header {
+  display: flex;
+  align-items: center;
+  
+  flex: 1.5;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 5vw;
+  background: url('../img/centria.jpg') no-repeat;
+  background-position: 0% 50%;
+  background-size: auto 80%;
+}
+
+.header_text {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3vw;
+}
+
+/* Content */
+.newest, .wordsearch {
+  width: 60%;
+}
+
+#newsContainer {
+  overflow-y: auto;
+}
+
+.page_content {
+  flex: 17;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.pc_0 {
+  flex: 1;
+}
+
+.pc_1 {
+  flex: 9;
+  overflow-y: auto;
+}
+
+.page_content .row:first-child {
+  margin-top: 2%;
+}
+
+.searchSelectContainer {
+  width: 25%;
+}
+
+.searchSelectContainer select {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-bottom-right-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+.searchBtnContainer {
+  width: 15%;
+}
+
+/* Footer */
+.attributionContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding-left: 2vw;
+  pointer-events: none;
+
+  width: 100%;
+  height: 100%;
+}
+
+.attributionContainer a {
+  pointer-events: auto;
+}
+
+.page_footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+
+  background-color: rgba(0, 0, 0, 0.25);
+
+  flex: 1.5;
+}
+
+.paginationContainer {
+  display: none;
+}
+
+.pagination {
+  margin-bottom: 0;
+}
+
+/* Other */
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 3;
+}
+
+.loader div {
+  width: 12vw;
+  height: 12vw;
+}
+
+/* Bootstrap overrides */
+.card {
+  width: 100%;
+  min-height: 30vh;
+  cursor: pointer;
+}
+
+#newsContainer .col-sm-8 {
+  margin-bottom: 2vh;
+}
+
+.toast {
+  background-color: white;
+}
+
+.toast-body {
+  color: black;
+}
+
+#toast-container {
+    position: absolute;
+    z-index: 6;
+    right: 1%;
+    top: 1%;
+}
